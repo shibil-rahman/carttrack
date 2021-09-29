@@ -37,27 +37,36 @@ public class ProductDetails extends AppCompatActivity {
         ProductExpiry=findViewById(R.id.pdt_details_expiry);
         addtocart=findViewById(R.id.addtocart);
         String code =getIntent().getStringExtra("barcode");
+        System.out.println("sarangpk");
         getProductDetails(code);
+
     }
 
     public void getProductDetails(String ProductID)
     {
+
         DatabaseReference productsRef= FirebaseDatabase.getInstance().getReference().child("Products");
+        System.out.println(ProductID);
         productsRef.child(ProductID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists())
                 {
+
                     Products products=snapshot.getValue(Products.class);
-                    Pname = products.getName();
+                    Pname = products.getCategory();
                     Pprice = products.getPrice();
-                    Pquantity = products.getQuantity();
-                    Pexpiry = products.getExpiry();
-                    ProductName.setText(Pname);
+                    Pquantity = products.getBrand();
+                    Pexpiry = products.getBarcode();
+//                    ProductName.setText("sarang");
                     ProductPrice.setText(Pprice);
-                    ProductQuantity.setText("Quantity="+Pquantity);
-                    ProductExpiry.setText("Expiry Date is "+Pexpiry);
-                    Picasso.get().load(products.getImage()).into(ProductImage);
+                    ProductQuantity.setText(Pquantity);
+                    ProductExpiry.setText(Pexpiry);
+//                    Picasso.get().load(products.getImage()).into(ProductImage);
+                    ProductName.setText(Pname);
+                }
+                else{
+                    ProductName.setText("sarangpk");
                 }
             }
 
@@ -70,42 +79,42 @@ public class ProductDetails extends AppCompatActivity {
     }
 }
 class Products {
-    private String barcode,brand,category,expiry,name,price,quantity,image,pid;
+    private long barcode,price;
+    private String brand,category;
     public Products()
     {
 
     }
 
-    public Products(String barcode, String brand, String category, String expiry, String name, String price, String quantity,String image) {
+    public Products(long barcode, String brand, String category, long price) {
         this.barcode = barcode;
         this.brand = brand;
         this.category = category;
-        this.expiry = expiry;
-        this.name = name;
+        //this.expiry = expiry;
+        //this.name = name;
         this.price = price;
-        this.quantity = quantity;
-        this.image=image;
-        this.pid=pid;
+        //this.quantity = quantity;
     }
 
-    public String getPid() {
-        return pid;
-    }
+//    public String getPid() {
+//        return pid;
+//    }
+//
+//    public void setPid(String pid) {
+//        this.pid = pid;
+//    }
 
-    public void setPid(String pid) {
-        this.pid = pid;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public String getImage() {
-        return image;
-    }
+//    public void setImage(String image) {
+//        this.image = image;
+//    }
+//
+//    public String getImage() {
+//        return image;
+//    }
 
     public String getBarcode() {
-        return barcode;
+        String b=Long.toString(barcode);
+        return b;
     }
 
     public String getBrand() {
@@ -116,23 +125,24 @@ class Products {
         return category;
     }
 
-    public String getExpiry() {
-        return expiry;
-    }
-
-    public String getName() {
-        return name;
-    }
+//    public String getExpiry() {
+//        return expiry;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
 
     public String getPrice() {
-        return price;
+        String s=Long.toString(price);
+        return s;
     }
 
-    public String getQuantity() {
-        return quantity;
-    }
+//    public String getQuantity() {
+//        return quantity;
+//    }
 
-    public void setBarcode(String barcode) {
+    public void setBarcode(long barcode) {
         this.barcode = barcode;
     }
 
@@ -144,19 +154,19 @@ class Products {
         this.category = category;
     }
 
-    public void setExpiry(String expiry) {
-        this.expiry = expiry;
-    }
+//    public void setExpiry(String expiry) {
+//        this.expiry = expiry;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPrice(String price) {
+    public void setPrice(long price) {
         this.price = price;
     }
 
-    public void setQuantity(String quantity) {
-        this.quantity = quantity;
-    }
+//    public void setQuantity(String quantity) {
+//        this.quantity = quantity;
+//    }
 }
