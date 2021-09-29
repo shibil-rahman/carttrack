@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".SetBudget"
+            android:exported="true" />
+        <activity
             android:name=".Final"
             android:exported="true" />
         <activity

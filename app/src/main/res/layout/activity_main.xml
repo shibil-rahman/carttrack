@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg3"
     tools:context=".MainActivity">
 
     <Button
@@ -13,15 +12,31 @@
         android:layout_height="60dp"
         android:background="@drawable/custom_button"
         android:text="Scan Product"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/button3"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:background="@drawable/custom_button"
+        android:text="Set my budget"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.47" />
+
+    <Button
         android:id="@+id/button2"
         android:layout_width="170dp"
         android:layout_height="60dp"
+        android:textColor="@color/white"
         android:background="@drawable/custom_button"
         android:text="view cart"
         app:layout_constraintBottom_toBottomOf="parent"

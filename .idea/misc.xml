@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/Users/shibil/AndroidStudioProjects/carttrack/app/src/main/res/drawable/custom_button.xml" value="0.1" />
         <entry key="..\:/Users/shibil/AndroidStudioProjects/carttrack/app/src/main/res/layout/activity_final.xml" value="0.22" />
-        <entry key="..\:/Users/shibil/AndroidStudioProjects/carttrack/app/src/main/res/layout/activity_main.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/shibil/AndroidStudioProjects/carttrack/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/shibil/AndroidStudioProjects/carttrack/app/src/main/res/layout/activity_product_details.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/shibil/AndroidStudioProjects/carttrack/app/src/main/res/layout/activity_set_budget.xml" value="0.20153985507246377" />
+        <entry key="..\:/Users/shibil/AndroidStudioProjects/carttrack/app/src/main/res/layout/activity_splash_screen.xml" value="0.20153985507246377" />
         <entry key="..\:/Users/shibil/AndroidStudioProjects/carttrack/app/src/main/res/layout/activity_view_cart.xml" value="0.25" />
         <entry key="..\:/Users/shibil/AndroidStudioProjects/carttrack/app/src/main/res/layout/cart_items_layout.xml" value="0.2033514492753623" />
       </map>

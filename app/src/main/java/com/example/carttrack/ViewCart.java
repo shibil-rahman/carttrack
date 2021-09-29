@@ -21,11 +21,15 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.HashMap;
 
 public class ViewCart extends AppCompatActivity {
 
@@ -37,6 +41,8 @@ public class ViewCart extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private DatabaseReference cartListRef;
+    final DatabaseReference BudgetRef= FirebaseDatabase.getInstance().getReference().child("Budgets");
+    HashMap<String,Object> BudgetMap=new HashMap<>();
     Button confirm,home;
     TextView TotalPrice,pname,pqty,pprice;
     private int userBudget;
@@ -53,6 +59,21 @@ public class ViewCart extends AppCompatActivity {
         TotalPrice=findViewById(R.id.cart_TP);
         home=findViewById(R.id.home);
         confirm=findViewById(R.id.confirm);
+        BudgetRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists())
+                {
+                    Budget budget=snapshot.getValue(Budget.class);
+                    userBudget=Integer.valueOf(budget.getBudget());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         cartListRef= FirebaseDatabase.getInstance().getReference().child("Cart List");
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,6 +112,13 @@ public class ViewCart extends AppCompatActivity {
                         //Toast.makeText(CartActivity.this, "Sorry!TotalPrice exeeds your budget", Toast.LENGTH_SHORT).show();
                         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ViewCart.this);
                         alertDialogBuilder.setMessage("TotalPrice exeeds your budget.\nPlease remove some items from the cart!");
+
+                        AlertDialog alertDialog = alertDialogBuilder.create();
+                        alertDialog.show();
+                    }
+                    else{
+                        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ViewCart.this);
+                        alertDialogBuilder.setMessage("You can purchase for Rs."+(userBudget-OverallTotalPrice)+" more..!");
 
                         AlertDialog alertDialog = alertDialogBuilder.create();
                         alertDialog.show();
@@ -249,4 +277,34 @@ class CartViewHolder extends RecyclerView.ViewHolder implements View.OnClickList
 }
 interface ItemClickListener {
     void onclick(View view,int position,boolean isLongClick);
+}
+class Budget {
+    public String budget;
+    public String totalprice;
+
+    public Budget() {
+
+    }
+
+    public String getBudget() {
+        return budget;
+    }
+
+    public void setBudget(String budget) {
+        this.budget = budget;
+    }
+
+    public Budget(String budget, String totalprice) {
+        this.budget = budget;
+        this.totalprice = totalprice;
+    }
+
+    public String getTotalprice() {
+        return totalprice;
+    }
+
+    public void setTotalprice(String totalprice) {
+        this.totalprice = totalprice;
+    }
+
 }
