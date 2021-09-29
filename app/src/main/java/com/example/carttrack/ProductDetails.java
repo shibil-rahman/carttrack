@@ -45,16 +45,12 @@ public class ProductDetails extends AppCompatActivity {
         ProductExpiry=findViewById(R.id.pdt_details_expiry);
         addtocart=findViewById(R.id.addtocart);
         String code =getIntent().getStringExtra("barcode");
-<<<<<<< HEAD
         addtocart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 addingtoCartList();
             }
         });
-=======
-        System.out.println("sarangpk");
->>>>>>> 5eb84b6c8a6c4e8b760a9c42198695f28c9c58df
         getProductDetails(code);
 
     }
@@ -75,21 +71,11 @@ public class ProductDetails extends AppCompatActivity {
                     Pprice = products.getPrice();
                     Pquantity = products.getBrand();
                     Pexpiry = products.getBarcode();
-<<<<<<< HEAD
-=======
-//                    ProductName.setText("sarang");
->>>>>>> 5eb84b6c8a6c4e8b760a9c42198695f28c9c58df
                     ProductPrice.setText(Pprice);
                     ProductQuantity.setText(Pquantity);
                     ProductExpiry.setText(Pexpiry);
 //                    Picasso.get().load(products.getImage()).into(ProductImage);
                     ProductName.setText(Pname);
-<<<<<<< HEAD
-=======
-                }
-                else{
-                    ProductName.setText("sarangpk");
->>>>>>> 5eb84b6c8a6c4e8b760a9c42198695f28c9c58df
                 }
 
             }
@@ -119,7 +105,7 @@ public class ProductDetails extends AppCompatActivity {
         cartMap.put("ptime",SaveCurrentTime);
         cartMap.put("quantity",NoButton.getNumber());
 
-        cartListReference.child("User View").child("Products").child(ProductID).
+        cartListReference.child("User View").child("Products").child(ProductPrice.getText().toString()).
                 updateChildren(cartMap).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
@@ -226,8 +212,4 @@ class Products {
 //    public void setQuantity(String quantity) {
 //        this.quantity = quantity;
 //    }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 5eb84b6c8a6c4e8b760a9c42198695f28c9c58df

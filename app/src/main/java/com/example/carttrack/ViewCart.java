@@ -54,6 +54,13 @@ public class ViewCart extends AppCompatActivity {
         home=findViewById(R.id.home);
         confirm=findViewById(R.id.confirm);
         cartListRef= FirebaseDatabase.getInstance().getReference().child("Cart List");
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(ViewCart.this,Final.class);
+                startActivity(intent);
+            }
+        });
 
 
 
@@ -91,7 +98,7 @@ public class ViewCart extends AppCompatActivity {
                 }
                 cartViewHolder.pqty.setText("Quantity=" + cart.getQuantity());
                 cartViewHolder.pname.setText(cart.getPname());
-                cartViewHolder.pprice.setText("Price=Rs " + cart.getPprice()*);
+                cartViewHolder.pprice.setText("Price=Rs " + OneTypeProductTotalPrice);
                 TotalPrice.setText("Total Price=" + OverallTotalPrice);
 
                 name = cart.getPname();
@@ -132,7 +139,7 @@ public class ViewCart extends AppCompatActivity {
 //                                    startActivity(intent);
 //                                }
                                 if (i == 0) {
-                                    cartListRef.child("User View").child("Products").child(cart.getPid()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    cartListRef.child("User View").child("Products").child(cart.getPprice()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()) {
