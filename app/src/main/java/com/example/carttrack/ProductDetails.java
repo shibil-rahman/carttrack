@@ -1,20 +1,28 @@
 package com.example.carttrack;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.squareup.picasso.Picasso;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.HashMap;
 
 public class ProductDetails extends AppCompatActivity {
 
@@ -37,28 +45,39 @@ public class ProductDetails extends AppCompatActivity {
         ProductExpiry=findViewById(R.id.pdt_details_expiry);
         addtocart=findViewById(R.id.addtocart);
         String code =getIntent().getStringExtra("barcode");
+        addtocart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addingtoCartList();
+            }
+        });
         getProductDetails(code);
+
     }
 
     public void getProductDetails(String ProductID)
     {
+
         DatabaseReference productsRef= FirebaseDatabase.getInstance().getReference().child("Products");
+        System.out.println(ProductID);
         productsRef.child(ProductID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists())
                 {
+
                     Products products=snapshot.getValue(Products.class);
-                    Pname = products.getName();
+                    Pname = products.getCategory();
                     Pprice = products.getPrice();
-                    Pquantity = products.getQuantity();
-                    Pexpiry = products.getExpiry();
-                    ProductName.setText(Pname);
+                    Pquantity = products.getBrand();
+                    Pexpiry = products.getBarcode();
                     ProductPrice.setText(Pprice);
-                    ProductQuantity.setText("Quantity="+Pquantity);
-                    ProductExpiry.setText("Expiry Date is "+Pexpiry);
-                    Picasso.get().load(products.getImage()).into(ProductImage);
+                    ProductQuantity.setText(Pquantity);
+                    ProductExpiry.setText(Pexpiry);
+//                    Picasso.get().load(products.getImage()).into(ProductImage);
+                    ProductName.setText(Pname);
                 }
+
             }
 
             @Override
@@ -68,44 +87,77 @@ public class ProductDetails extends AppCompatActivity {
         });
 
     }
+    private void addingtoCartList()
+    {
+        String SaveCurrentDate,SaveCurrentTime;
+        Calendar CalForDate=Calendar.getInstance();
+        SimpleDateFormat currentDate=new SimpleDateFormat("MMM dd yyyy");
+        SaveCurrentDate=currentDate.format(CalForDate.getTime());
+        SimpleDateFormat currentTime= new SimpleDateFormat("HH:MM:SS a");
+        SaveCurrentTime=currentTime.format(CalForDate.getTime());
+
+        final DatabaseReference cartListReference=FirebaseDatabase.getInstance().getReference().child("Cart List");
+        final HashMap<String,Object> cartMap=new HashMap<>();
+        cartMap.put("pid",Pexpiry);
+        cartMap.put("pname",ProductName.getText().toString());
+        cartMap.put("pprice",ProductPrice.getText().toString());
+        cartMap.put("pdate",SaveCurrentDate);
+        cartMap.put("ptime",SaveCurrentTime);
+        cartMap.put("quantity",NoButton.getNumber());
+
+        cartListReference.child("User View").child("Products").child(ProductID).
+                updateChildren(cartMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful())
+                {
+                                    Toast.makeText(ProductDetails.this, "Added to Cart", Toast.LENGTH_SHORT).show();
+                                    Intent intent=new Intent(ProductDetails.this,ViewCart.class);
+                                    startActivity(intent);
+
+                }
+            }
+        });
+
+    }
 }
 class Products {
-    private String barcode,brand,category,expiry,name,price,quantity,image,pid;
+    private long barcode,price;
+    private String brand,category;
     public Products()
     {
 
     }
 
-    public Products(String barcode, String brand, String category, String expiry, String name, String price, String quantity,String image) {
+    public Products(long barcode, String brand, String category, long price) {
         this.barcode = barcode;
         this.brand = brand;
         this.category = category;
-        this.expiry = expiry;
-        this.name = name;
+        //this.expiry = expiry;
+        //this.name = name;
         this.price = price;
-        this.quantity = quantity;
-        this.image=image;
-        this.pid=pid;
+        //this.quantity = quantity;
     }
 
-    public String getPid() {
-        return pid;
-    }
+//    public String getPid() {
+//        return pid;
+//    }
+//
+//    public void setPid(String pid) {
+//        this.pid = pid;
+//    }
 
-    public void setPid(String pid) {
-        this.pid = pid;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public String getImage() {
-        return image;
-    }
+//    public void setImage(String image) {
+//        this.image = image;
+//    }
+//
+//    public String getImage() {
+//        return image;
+//    }
 
     public String getBarcode() {
-        return barcode;
+        String b=Long.toString(barcode);
+        return b;
     }
 
     public String getBrand() {
@@ -116,23 +168,24 @@ class Products {
         return category;
     }
 
-    public String getExpiry() {
-        return expiry;
-    }
-
-    public String getName() {
-        return name;
-    }
+//    public String getExpiry() {
+//        return expiry;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
 
     public String getPrice() {
-        return price;
+        String s=Long.toString(price);
+        return s;
     }
 
-    public String getQuantity() {
-        return quantity;
-    }
+//    public String getQuantity() {
+//        return quantity;
+//    }
 
-    public void setBarcode(String barcode) {
+    public void setBarcode(long barcode) {
         this.barcode = barcode;
     }
 
@@ -144,19 +197,19 @@ class Products {
         this.category = category;
     }
 
-    public void setExpiry(String expiry) {
-        this.expiry = expiry;
-    }
+//    public void setExpiry(String expiry) {
+//        this.expiry = expiry;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPrice(String price) {
+    public void setPrice(long price) {
         this.price = price;
     }
 
-    public void setQuantity(String quantity) {
-        this.quantity = quantity;
-    }
+//    public void setQuantity(String quantity) {
+//        this.quantity = quantity;
+//    }
 }
