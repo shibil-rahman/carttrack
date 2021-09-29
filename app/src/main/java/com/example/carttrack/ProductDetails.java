@@ -45,12 +45,16 @@ public class ProductDetails extends AppCompatActivity {
         ProductExpiry=findViewById(R.id.pdt_details_expiry);
         addtocart=findViewById(R.id.addtocart);
         String code =getIntent().getStringExtra("barcode");
+<<<<<<< HEAD
         addtocart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 addingtoCartList();
             }
         });
+=======
+        System.out.println("sarangpk");
+>>>>>>> 5eb84b6c8a6c4e8b760a9c42198695f28c9c58df
         getProductDetails(code);
 
     }
@@ -71,11 +75,21 @@ public class ProductDetails extends AppCompatActivity {
                     Pprice = products.getPrice();
                     Pquantity = products.getBrand();
                     Pexpiry = products.getBarcode();
+<<<<<<< HEAD
+=======
+//                    ProductName.setText("sarang");
+>>>>>>> 5eb84b6c8a6c4e8b760a9c42198695f28c9c58df
                     ProductPrice.setText(Pprice);
                     ProductQuantity.setText(Pquantity);
                     ProductExpiry.setText(Pexpiry);
 //                    Picasso.get().load(products.getImage()).into(ProductImage);
                     ProductName.setText(Pname);
+<<<<<<< HEAD
+=======
+                }
+                else{
+                    ProductName.setText("sarangpk");
+>>>>>>> 5eb84b6c8a6c4e8b760a9c42198695f28c9c58df
                 }
 
             }
@@ -212,4 +226,8 @@ class Products {
 //    public void setQuantity(String quantity) {
 //        this.quantity = quantity;
 //    }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5eb84b6c8a6c4e8b760a9c42198695f28c9c58df

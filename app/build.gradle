@@ -56,4 +56,5 @@ dependencies {
     implementation 'io.paperdb:paperdb:2.7.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+
 }
