@@ -14,17 +14,25 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn;
+    Button scan,cart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn = findViewById(R.id.button);
-        btn.setOnClickListener(new View.OnClickListener() {
+        scan = findViewById(R.id.button);
+        cart = findViewById(R.id.button2);
+        scan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 scanCode();
+            }
+        });
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,ViewCart.class);
+                startActivity(intent);
             }
         });
     }
