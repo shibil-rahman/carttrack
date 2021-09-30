@@ -43,7 +43,8 @@ the virtual cart
 # Architecture of the system
 
 
-![Architecture of the system](https://user-images.githubusercontent.com/44165496/135399266-ded18fb6-4d6d-4fde-9286-88ab30d86782.jpeg)
+![Architecture of the system](https://user-images.githubusercontent.com/44165496/135411397-e0c76edc-4f4e-4aa0-ba31-e6abc1262efc.jpeg)
+
 
 ### Definition:
 
