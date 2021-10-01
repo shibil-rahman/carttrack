@@ -43,7 +43,7 @@ the virtual cart
 # Architecture of the system
 
 
-![Architecture of the system](https://user-images.githubusercontent.com/44165496/135411397-e0c76edc-4f4e-4aa0-ba31-e6abc1262efc.jpeg)
+![Architecture of the system](https://user-images.githubusercontent.com/62540555/135616218-330ee86c-b5d1-42f3-a08b-6859cb187b26.jpeg)
 
 
 ### Technology stack:
