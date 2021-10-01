@@ -45,7 +45,6 @@ the virtual cart
 
 ![Architecture of the system](https://user-images.githubusercontent.com/62540555/135616218-330ee86c-b5d1-42f3-a08b-6859cb187b26.jpeg)
 
-
 ### Technology stack:
 
 #### 1. Android Studio
@@ -84,6 +83,8 @@ their data from any device, be it web or mobile.
 #### Demo video:
 <a href="https://drive.google.com/file/d/15bN2Ampb9r4Mt6dIr4AggHtkmeuBvrfd/view?usp=sharing">https://drive.google.com/file/d/15bN2Ampb9r4Mt6dIr4AggHtkmeuBvrfd/view?usp=sharing</a>
 # Presentation
+#### Slides:
+<a href="https://drive.google.com/file/d/1S6Gc0xEX1sSlTd0-T99trB3JaEf8hsI_/view?usp=sharing">https://drive.google.com/file/d/1S6Gc0xEX1sSlTd0-T99trB3JaEf8hsI_/view?usp=sharing</a>
 #### Video:
 <a href="https://drive.google.com/file/d/1saAAKFfP_bFWZO-sKXrbgW8J-Xcff7NI/view?usp=sharing">https://drive.google.com/file/d/1saAAKFfP_bFWZO-sKXrbgW8J-Xcff7NI/view?usp=sharing</a>
 
