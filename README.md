@@ -46,9 +46,6 @@ the virtual cart
 ![Architecture of the system](https://user-images.githubusercontent.com/44165496/135411397-e0c76edc-4f4e-4aa0-ba31-e6abc1262efc.jpeg)
 
 
-### Definition:
-
-
 ### Technology stack:
 
 #### 1. Android Studio
@@ -84,8 +81,47 @@ their data from any device, be it web or mobile.
 
 
 # Link to product walkthrough:
-Demo video
-# presentation
+#### Demo video:
+<a href="https://drive.google.com/file/d/15bN2Ampb9r4Mt6dIr4AggHtkmeuBvrfd/view?usp=sharing">https://drive.google.com/file/d/15bN2Ampb9r4Mt6dIr4AggHtkmeuBvrfd/view?usp=sharing</a>
+# Presentation
+#### Video:
+<a href="https://drive.google.com/file/d/1saAAKFfP_bFWZO-sKXrbgW8J-Xcff7NI/view?usp=sharing">https://drive.google.com/file/d/1saAAKFfP_bFWZO-sKXrbgW8J-Xcff7NI/view?usp=sharing</a>
+
+# Team
+#### Mentors
+ 1.Mamatha Venkatesh <br /> 
+ 2.Balakrishnan Rajenderan 
+#### Members
+ Ann Rose Benny<br /> 
+ CGPA- 8.56<br /> 
+ Role - Database management<br /> 
+ NSS College Of Engineering, Palakkad<br /> 
+
+ SHIBIL RAHMAN P <br /> 
+ CGPA: 8.82<br /> 
+ Role: Interface Implementation (Using JAVA)<br /> 
+ NSS College of Engineering, Palakkad<br /> 
+
+ Anjay Muraleedharan<br /> 
+ CGPA - 8.03<br /> 
+ Role - Integration and testing<br /> 
+ NSS College of Engineering, Palakkad<br /> 
+
+ Thabsheer Hussain <br /> 
+ CGPA: 7.75<br /> 
+ Role: interface design (Using XML)<br /> 
+ NSS College of Engineering, Palakkad<br /> 
+
+ Jithulal T<br /> 
+ CGPA-8.91<br /> 
+ Role-Database Connection<br /> 
+ NSS College of Engineering, Palakkad<br /> 
+
+ Sarang P Karun<br /> 
+ CGPA-8.48<br /> 
+ Role-Data collection and management<br /> 
+ NSS College of Engineering, Palakkad<br /> 
+
 
 
 
