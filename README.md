@@ -43,7 +43,8 @@ the virtual cart
 # Architecture of the system
 
 
-![Architecture of the system](https://user-images.githubusercontent.com/44165496/135411397-e0c76edc-4f4e-4aa0-ba31-e6abc1262efc.jpeg)
+![architecture](https://user-images.githubusercontent.com/47684501/135616806-4eb7363c-05f2-430c-9547-3d964ce06fdb.jpg)
+
 
 
 ### Technology stack:
@@ -94,6 +95,7 @@ their data from any device, be it web or mobile.
 #### Members
  Ann Rose Benny<br /> 
  CGPA- 8.56<br /> 
+
  Role - Database management<br /> 
  NSS College Of Engineering, Palakkad<br /> 
 
