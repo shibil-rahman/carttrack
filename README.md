@@ -94,40 +94,40 @@ It provides us agility, durability, global scale with "anywhere, anytime" data a
 #### Video:
 <a href="https://drive.google.com/file/d/1saAAKFfP_bFWZO-sKXrbgW8J-Xcff7NI/view?usp=sharing">https://drive.google.com/file/d/1saAAKFfP_bFWZO-sKXrbgW8J-Xcff7NI/view?usp=sharing</a>
 
-#Team
+# Team
 #### Mentors
-- 1.Mamatha Venkatesh
-- 2.Balakrishnan Rajenderan
+ 1.Mamatha Venkatesh <br /> 
+ 2.Balakrishnan Rajenderan 
 #### Members
-- Ann Rose Benny
-- CGPA- 8.56
-- Role - Database management
-- NSS College Of Engineering, Palakkad
+ Ann Rose Benny<br /> 
+ CGPA- 8.56<br /> 
+ Role - Database management<br /> 
+ NSS College Of Engineering, Palakkad<br /> 
 
-- SHIBIL RAHMAN P
-- CGPA: 8.82
-- Role: Interface Implementation (Using JAVA)
-- NSS College of Engineering, Palakkad
+ SHIBIL RAHMAN P <br /> 
+ CGPA: 8.82<br /> 
+ Role: Interface Implementation (Using JAVA)<br /> 
+ NSS College of Engineering, Palakkad<br /> 
 
-- Anjay Muraleedharan
-- CGPA - 8.03
-- Role - Integration and testing
-- NSS College of Engineering, Palakkad
+ Anjay Muraleedharan<br /> 
+ CGPA - 8.03<br /> 
+ Role - Integration and testing<br /> 
+ NSS College of Engineering, Palakkad<br /> 
 
-- Thabsheer Hussain 
-- CGPA: 7.75
-- Role: interface design (Using XML)
-- NSS College of Engineering, Palakkad
+ Thabsheer Hussain <br /> 
+ CGPA: 7.75<br /> 
+ Role: interface design (Using XML)<br /> 
+ NSS College of Engineering, Palakkad<br /> 
 
-- Jithulal T
-- CGPA-8.91
-- Role-Database Connection
-- NSS College of Engineering, Palakkad
+ Jithulal T<br /> 
+ CGPA-8.91<br /> 
+ Role-Database Connection<br /> 
+ NSS College of Engineering, Palakkad<br /> 
 
-- Sarang P Karun
-- CGPA-8.48
-- Role-Data collection and management
-- NSS College of Engineering, Palakkad
+ Sarang P Karun<br /> 
+ CGPA-8.48<br /> 
+ Role-Data collection and management<br /> 
+ NSS College of Engineering, Palakkad<br /> 
 
 
 
