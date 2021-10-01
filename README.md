@@ -46,9 +46,6 @@ the virtual cart
 ![Architecture of the system](https://user-images.githubusercontent.com/44165496/135411397-e0c76edc-4f4e-4aa0-ba31-e6abc1262efc.jpeg)
 
 
-### Definition:
-
-
 ### Technology stack:
 
 #### 1. Android Studio
@@ -91,8 +88,47 @@ time costs and capacity. It eliminates buying and managing our own data storage 
 It provides us agility, durability, global scale with "anywhere, anytime" data access.
 
 # Link to product walkthrough:
-Demo video
-# presentation
+#### Demo video:
+<a href="https://drive.google.com/file/d/15bN2Ampb9r4Mt6dIr4AggHtkmeuBvrfd/view?usp=sharing">https://drive.google.com/file/d/15bN2Ampb9r4Mt6dIr4AggHtkmeuBvrfd/view?usp=sharing</a>
+# Presentation
+#### Video:
+<a href="https://drive.google.com/file/d/1saAAKFfP_bFWZO-sKXrbgW8J-Xcff7NI/view?usp=sharing">https://drive.google.com/file/d/1saAAKFfP_bFWZO-sKXrbgW8J-Xcff7NI/view?usp=sharing</a>
+
+#Team
+#### Mentors
+1.Mamatha Venkatesh
+2.Balakrishnan Rajenderan
+#### Members
+Ann Rose Benny
+CGPA- 8.56
+Role - Database management
+NSS College Of Engineering, Palakkad
+
+SHIBIL RAHMAN P
+CGPA: 8.82
+Role: Interface Implementation (Using JAVA)
+NSS College of Engineering, Palakkad
+
+anjay Muraleedharan
+CGPA - 8.03
+Role - Integration and testing
+NSS College of Engineering, Palakkad
+
+Thabsheer Hussain 
+CGPA: 7.75
+Role: interface design (Using XML)
+NSS College of Engineering, Palakkad
+
+Jithulal T
+CGPA-8.91
+Role-Database Connection
+NSS College of Engineering, Palakkad
+
+Sarang P Karun
+CGPA-8.48
+Role-Data collection and management
+NSS College of Engineering, Palakkad
+
 
 
 
