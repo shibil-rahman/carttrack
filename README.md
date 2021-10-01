@@ -96,38 +96,38 @@ It provides us agility, durability, global scale with "anywhere, anytime" data a
 
 #Team
 #### Mentors
--1.Mamatha Venkatesh
--2.Balakrishnan Rajenderan
+- 1.Mamatha Venkatesh
+- 2.Balakrishnan Rajenderan
 #### Members
--Ann Rose Benny
--CGPA- 8.56
--Role - Database management
--NSS College Of Engineering, Palakkad
+- Ann Rose Benny
+- CGPA- 8.56
+- Role - Database management
+- NSS College Of Engineering, Palakkad
 
--SHIBIL RAHMAN P
--CGPA: 8.82
--Role: Interface Implementation (Using JAVA)
--NSS College of Engineering, Palakkad
+- SHIBIL RAHMAN P
+- CGPA: 8.82
+- Role: Interface Implementation (Using JAVA)
+- NSS College of Engineering, Palakkad
 
--anjay Muraleedharan
--CGPA - 8.03
--Role - Integration and testing
--NSS College of Engineering, Palakkad
+- Anjay Muraleedharan
+- CGPA - 8.03
+- Role - Integration and testing
+- NSS College of Engineering, Palakkad
 
--Thabsheer Hussain 
--CGPA: 7.75
--Role: interface design (Using XML)
--NSS College of Engineering, Palakkad
+- Thabsheer Hussain 
+- CGPA: 7.75
+- Role: interface design (Using XML)
+- NSS College of Engineering, Palakkad
 
--Jithulal T
--CGPA-8.91
--Role-Database Connection
--NSS College of Engineering, Palakkad
+- Jithulal T
+- CGPA-8.91
+- Role-Database Connection
+- NSS College of Engineering, Palakkad
 
--Sarang P Karun
--CGPA-8.48
--Role-Data collection and management
--NSS College of Engineering, Palakkad
+- Sarang P Karun
+- CGPA-8.48
+- Role-Data collection and management
+- NSS College of Engineering, Palakkad
 
 
 
